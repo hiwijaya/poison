@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Jost, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 
 const jost = Jost({
@@ -35,9 +36,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jost.variable} ${pressStart.variable} ${geistMono.variable} antialiased`}>
-        <div className="w-full max-w-2xl m-auto">
+        <div className="flex flex-col w-full max-w-2xl min-h-screen m-auto">
           <Header/>
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer/>
         </div>
       </body>
     </html>
