@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Jost, Press_Start_2P } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 
 const jost = Jost({
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${jost.variable} ${pressStart.variable} ${geistMono.variable} antialiased`}>
         <div className="w-full max-w-2xl m-auto">
+          <Header/>
           {children}
         </div>
       </body>
