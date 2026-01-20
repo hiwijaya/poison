@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jost.variable} ${pressStart.variable} ${geistMono.variable} antialiased`}>
-        <div className="flex flex-col w-full max-w-2xl min-h-screen m-auto">
+        <div className="flex flex-col w-full max-w-2xl min-h-screen m-auto px-4 md:px-0">
           <Header/>
           <main className="flex-1">
             {children}
