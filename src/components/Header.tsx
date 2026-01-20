@@ -6,6 +6,13 @@ import Link from "next/link";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  const renderMenuItem = () => (
+    <>
+      <Link href="/blog">Blog</Link>
+      <Link href="/about">About</Link>
+    </>
+  );
+
   const renderMobileMenu = () => (
     <>
       <button
@@ -36,8 +43,7 @@ export default function Header() {
         `}>
 
         <nav className="flex-col items-end space-y-6 text-highlight p-4 pt-20 flex xs:hidden">
-          <Link href="/blog">Blog</Link>
-          <Link href="/about">About</Link>
+          {renderMenuItem()}
         </nav>
       </div>
     </>
@@ -47,8 +53,7 @@ export default function Header() {
     <header className="flex flex-row justify-between items-center h-14">
       <Link className="font-heading text-primary z-50" href="/">poison</Link>
       <nav className="space-x-6 text-highlight hidden xs:flex">
-        <Link href="/blog">Blog</Link>
-        <Link href="/about">About</Link>
+        {renderMenuItem()}
       </nav>
 
       {renderMobileMenu()}
