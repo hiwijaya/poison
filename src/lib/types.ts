@@ -6,7 +6,7 @@ export interface PostMeta {
   tags: string[]
   author: string
   slug: string
-  cover: string | null
+  cover: string
 };
 
 export interface Post {

@@ -34,9 +34,7 @@ function parsePost(fileName: string): Post {
     tags: data.tags ?? [],
     author: data.author,
     slug,
-    cover: data.cover
-      ? `${ASSETS_BASE}/${slug}/${data.cover}`
-      : null,
+    cover: `${ASSETS_BASE}/${slug}/${data.cover}`
   };
 
   return { meta, content };
