@@ -81,15 +81,13 @@ export function getAllPosts(page: number = 1, perPage: number = 5): postPaginati
   };
 }
 
-export function getPostBySlug(slug: string): Post {
-  const fileName = `${slug}.md`;
-  const fullPath = path.join(POSTS_DIR, fileName);
+export function getPostBySlug(slug: string): Post | null {
+  const file = getAllPostFiles()
+    .find(file => parsePost(file).meta.slug === slug);
 
-  if (!fs.existsSync(fullPath)) {
-    throw new Error(`Post not found: ${slug}`);
-  }
+  if (!file) return null;
 
-  return parsePost(fileName);
+  return parsePost(file);
 }
 
 export function getPostByTag(tag: string): PostMeta[] {
