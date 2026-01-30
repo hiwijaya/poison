@@ -17,7 +17,7 @@ type postPagination = {
 };
 
 function getAllPostFiles(): string[] {
-  return fs.readdirSync(POSTS_DIR).filter(file => file.endsWith('.md'));
+  return fs.readdirSync(POSTS_DIR).filter(file => /\.(md|mdx)$/.test(file));
 }
 
 function parsePost(fileName: string): Post {
@@ -47,23 +47,22 @@ function sortByDateDesc(posts: PostMeta[]): PostMeta[] {
 }
 
 
-export function getRecentPosts(limit = 3): PostMeta[] {
+export function getAllPosts(): PostMeta[] {
   return sortByDateDesc(
     getAllPostFiles().map((file) => {
       const { meta } = parsePost(file);
       return meta;
     })
-  ).slice(0, limit);
+  );
 }
 
-export function getAllPosts(page: number = 1, perPage: number = 5): postPagination {
+export function getRecentPosts(limit = 3): PostMeta[] {
+  return getAllPosts().slice(0, limit);
+}
 
-  const allPosts = sortByDateDesc(
-    getAllPostFiles().map((file) => {
-      const { meta } = parsePost(file);
-      return meta;
-    })
-  );
+export function getPaginationPosts(page: number = 1, perPage: number = 5): postPagination {
+
+  const allPosts = getAllPosts();
 
   const total = allPosts.length;
   const totalPages = Math.ceil(total / perPage);

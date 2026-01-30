@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Paging from "@/components/Paging";
 import PostCard from "@/components/PostCard";
-import { getAllPosts } from "@/lib/api";
+import { getPaginationPosts } from "@/lib/api";
 
 
 type BlogPageProps = {
@@ -19,7 +19,7 @@ export default async function Blog({ searchParams }: BlogPageProps) {
     notFound();
   }
 
-  const { posts, pagination } = getAllPosts(page, perPage);
+  const { posts, pagination } = getPaginationPosts(page, perPage);
 
   if(page > pagination.totalPages) {
     notFound();
