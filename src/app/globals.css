@@ -120,7 +120,7 @@ body {
   ::-webkit-scrollbar-thumb {
       width: 4px;
       height: 4px;
-      background-color: var(--primary);
+      background-color: #242E28;
       cursor: pointer;
   }
 }
