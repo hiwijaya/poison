@@ -24,8 +24,31 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: "Poison",
-  description: "A venomous template",
+  title: "Poison · a venomous template",
+  description: "Developer portfolio and blog template designed for creators who value clarity, performance, and character.",
+  metadataBase: new URL('https://poison-template.vercel.app'),
+  openGraph: {
+    title: "Poison · a venomous template",
+    description: "Developer portfolio and blog template designed for creators who value clarity, performance, and character.",
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Poison',
+    url: 'https://poison-template.vercel.app',
+    images: [
+      {
+        url: '/poison-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Poison · a venomous template'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Poison · a venomous template",
+    description: "Developer portfolio and blog template designed for creators who value clarity, performance, and character.",
+    images: ['/poison-og.png']
+  }
 };
 
 export default function RootLayout({
