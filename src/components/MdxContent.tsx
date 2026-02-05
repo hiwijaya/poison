@@ -3,9 +3,12 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
+import { useMDXComponents } from "@/mdx-components";
 
 
 export default function MdxContent({ source }: { source: string }) {
+  const mdxComponents = useMDXComponents({});
+
   return (
     <MDXRemote
       source={source}
@@ -25,6 +28,7 @@ export default function MdxContent({ source }: { source: string }) {
           ],
         },
       }}
+      components={mdxComponents}
     />
   )
 }
