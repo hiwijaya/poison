@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import type { Post, PostMeta } from "./types";
 
 export const POSTS_DIR = path.join(process.cwd(), 'src/posts');
-export const ASSETS_BASE = '/assets/blog';
+export const ASSETS_BASE = '/blog';
 
 type postPagination = {
   posts: PostMeta[]
