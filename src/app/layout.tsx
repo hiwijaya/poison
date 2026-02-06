@@ -26,14 +26,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Poison · a venomous template",
   description: "Developer portfolio and blog template designed for creators who value clarity, performance, and character.",
-  metadataBase: new URL('https://poison-template.vercel.app'),
+  metadataBase: new URL('https://venomous-template.vercel.app'),
   openGraph: {
     title: "Poison · a venomous template",
     description: "Developer portfolio and blog template designed for creators who value clarity, performance, and character.",
     type: 'website',
     locale: 'en_US',
     siteName: 'Poison',
-    url: 'https://poison-template.vercel.app',
+    url: 'https://venomous-template.vercel.app',
     images: [
       {
         url: '/poison-og.png',
