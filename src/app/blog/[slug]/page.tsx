@@ -2,6 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import MdxContent from "@/components/MdxContent";
+import moment from "moment";
 
 
 export function generateStaticParams() {
@@ -21,7 +22,7 @@ export default async function Post({ params }: {params: Promise<{slug: string}>}
       <header>
         <Image src={post.meta.cover} alt="Cover" width={1024} height={576}/>
         <h1>{post.meta.title}</h1>
-        <time dateTime={post.meta.date}>{post.meta.date}</time>
+        <time dateTime={post.meta.date}>{moment(post.meta.date).format('MMMM DD, YYYY')}</time>
       </header>
 
       <MdxContent source={post.content}/>
