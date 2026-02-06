@@ -26,19 +26,6 @@ body {
 }
 
 .post {
-  & header {
-    @apply mb-12 sm:mb-16;
-  }
-  & header h1 {
-    @apply text-2xl text-highlight font-bold mb-4;
-  }
-  & header time {
-    @apply text-sm;
-  }
-  & header img {
-    @apply rounded-2xl object-cover mb-4;
-  }
-
   & a {
     @apply text-primary;
   }
@@ -116,7 +103,6 @@ body {
   & ul.contains-task-list {
     @apply list-none ml-4;
   }
-
 }
 
 @theme inline {

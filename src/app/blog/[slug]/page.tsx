@@ -19,17 +19,20 @@ export default async function Post({ params }: {params: Promise<{slug: string}>}
   }
 
   return(
-    <article className="post my-6">
-      <header>
-        <Image src={post.meta.cover} alt="Cover" width={1024} height={576}/>
-        <time dateTime={post.meta.date}>{moment(post.meta.date).format('MMMM DD, YYYY')}</time>
-        <h1>{post.meta.title}</h1>
+    <article className="my-6">
+      <header className="mb-10">
+        <Image src={post.meta.cover} alt="Cover" width={1024} height={576}
+          className="rounded-2xl object-cover mb-4"/>
+        <time className="text-sm" dateTime={post.meta.date}>{moment(post.meta.date).format('MMMM DD, YYYY')}</time>
+        <h1 className="text-2xl text-highlight font-bold mb-4">{post.meta.title}</h1>
         <div className="flex flex-wrap gap-2">
           {post.meta.tags.map((tagName, i) => <Tag key={i} name={tagName}/>)}
         </div>
       </header>
 
-      <MdxContent source={post.content}/>
+      <div className="post">
+        <MdxContent source={post.content}/>
+      </div>
     </article>
   );
 }
