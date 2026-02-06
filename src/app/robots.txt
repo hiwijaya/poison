@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://venomous-template.vercel.app/sitemap.xml
