@@ -27,10 +27,10 @@ body {
 
 .post {
   & header {
-    @apply mb-12;
+    @apply mb-12 sm:mb-16;
   }
   & header h1 {
-    @apply text-2xl text-highlight font-bold mb-2;
+    @apply text-2xl text-highlight font-bold mb-4;
   }
   & header time {
     @apply text-sm;
