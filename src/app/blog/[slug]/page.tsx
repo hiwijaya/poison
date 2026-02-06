@@ -24,7 +24,7 @@ export default async function Post({ params }: {params: Promise<{slug: string}>}
         <Image src={post.meta.cover} alt="Cover" width={1024} height={576}/>
         <time dateTime={post.meta.date}>{moment(post.meta.date).format('MMMM DD, YYYY')}</time>
         <h1>{post.meta.title}</h1>
-        <div className="flex flex-wrap space-x-2">
+        <div className="flex flex-wrap gap-2">
           {post.meta.tags.map((tagName, i) => <Tag key={i} name={tagName}/>)}
         </div>
       </header>
