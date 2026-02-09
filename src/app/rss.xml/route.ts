@@ -18,20 +18,24 @@ export async function GET() {
 
   const rss =
   `<?xml version="1.0" encoding="UTF-8"?>
-  <rss version="2.0">
+  <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
       <title>Poison — a venomous template</title>
       <link>${SITE_URL}</link>
       <description>Developer portfolio and blog template designed for creators who value clarity, performance, and character.</description>
       <language>en</language>
       <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+      <atom:link
+        href="${SITE_URL}/rss.xml"
+        rel="self"
+        type="application/rss+xml"/>
       ${items}
     </channel>
   </rss>`;
 
   return new Response(rss, {
     headers: {
-      "Content-Type": "text/xml",
+      "Content-Type": "application/rss+xml"
     },
   });
 }
