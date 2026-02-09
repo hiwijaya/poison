@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧪 Poison
 
-## Getting Started
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/hiwijaya/poison)
 
-First, run the development server:
+A **fast, clean, and SEO-friendly blog template** built with **Next.js** and **Tailwind CSS** — designed for developers who value clarity, performance, and full control over their content.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This template is perfect for personal blogs, developer journals, or technical writing powered by Markdown and MDX.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js** — App Router, SSG, Metadata API, and modern routing
+- **Tailwind CSS** — utility-first styling with clean and scalable CSS
+- **Markdown / MDX** — write content the way developers love
+- **Shiki** — beautiful and accurate code syntax highlighting
+- **TypeScript** — type-safe and maintainable codebase
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Features
 
-## Learn More
+- ⚡ **Static Site Generation (SSG)** for blazing-fast performance
+- 📝 **Markdown & MDX support**
+- 🔍 **SEO best practices**
+- 🎨 **Custom styled markdown elements**
+- 📱 **Responsive design**
 
-To learn more about Next.js, take a look at the following resources:
+📜 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MIT License — feel free to use, modify, and share.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+⭐ Support
 
-## Deploy on Vercel
+If you find this template useful:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Give it a ⭐
+- Fork it
+- Build something awesome with it
