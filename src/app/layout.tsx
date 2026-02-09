@@ -27,6 +27,16 @@ export const metadata: Metadata = {
   title: "Poison · a venomous template",
   description: "Developer portfolio and blog template designed for creators who value clarity, performance, and character.",
   metadataBase: new URL('https://venomous-template.vercel.app'),
+  alternates: {
+    types: {
+      "application/rss+xml": [
+        {
+          url: "/rss.xml",
+          title: "RSS Feed"
+        }
+      ]
+    }
+  },
   openGraph: {
     title: "Poison · a venomous template",
     description: "Developer portfolio and blog template designed for creators who value clarity, performance, and character.",
