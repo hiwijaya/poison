@@ -6,6 +6,8 @@ A **fast, clean, and SEO-friendly blog template** built with **Next.js** and **T
 
 This template is perfect for personal blogs, developer journals, or technical writing powered by Markdown and MDX.
 
+Live preview: [https://venomous-template.vercel.app/](https://venomous-template.vercel.app/)
+
 ## ✨ Tech Stack
 
 - **Next.js** — App Router, SSG, Metadata API, and modern routing
@@ -22,14 +24,6 @@ This template is perfect for personal blogs, developer journals, or technical wr
 - 🎨 **Custom styled markdown elements**
 - 📱 **Responsive design**
 
-📜 License
+## 📜 License
 
 MIT License — feel free to use, modify, and share.
-
-⭐ Support
-
-If you find this template useful:
-
-- Give it a ⭐
-- Fork it
-- Build something awesome with it
