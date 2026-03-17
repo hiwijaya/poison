@@ -1,10 +1,22 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const renderMenuItem = () => (
     <>
@@ -19,7 +31,7 @@ export default function Header() {
         aria-label="Toggle menu"
         aria-expanded={open}
         aria-controls="mobile-menu"
-        onClick={() => setOpen(!open)}
+        onClick={() => setOpen((curr) => !curr)}
         className="relative h-4 w-6 flex-col justify-center flex xs:hidden z-50">
         <span
           className={`
